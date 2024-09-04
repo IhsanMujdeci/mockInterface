@@ -1,0 +1,33 @@
+{
+  "name": "mock-interface",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --config jest.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IhsanMujdeci/mockInterface.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "jest": ">=22.0.0",
+    "typescript": ">=4.4.3"
+  },
+  "devDependencies": {
+    "@swc-node/jest": "^1.6.5",
+    "@tsconfig/node12": "^1.0.11",
+    "@types/jest": "^27.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/IhsanMujdeci/mockInterface/issues"
+  },
+  "homepage": "https://github.com/IhsanMujdeci/mockInterface#readme"
+}

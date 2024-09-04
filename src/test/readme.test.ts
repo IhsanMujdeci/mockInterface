@@ -1,18 +1,5 @@
-# Mock Interface
+import {mockInterface} from "../";
 
-Zero dependency library that deeply mocks typescript interfaces via jest.fn() allowing you to adhere to easily solid principals.  
-
-### Type safety
-Full type safety is preserved, type errors are thrown if a mock return/resolve type is incorrect or if method called incorrectly.
-
-### Natively Jest
-Mock interfaces arbitrarily deeply, and they will behave as jest mocks.  
-All jest assertions will work as if it was a jest mock e.g. `toHaveBeenCalledTimes, toHaveBeenCalledWith, ...`  
-See full list from jest docs https://jestjs.io/docs/mock-function-api
-
-## Examples
-
-```typescript
 describe('Mock Interface', () => {
 
   it('Should test person interface', () => {
@@ -75,4 +62,3 @@ describe('Mock Interface', () => {
     expect(mockJsonWriter.toString).toHaveBeenCalledWith()
   })
 })
-```
