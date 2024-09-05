@@ -19,8 +19,9 @@
     "build": "tsup",
     "ci": "npm run build && npm run check-exports && npm run lint && npm run test",
     "check-exports": "attw --pack .",
-    "lint" : "tsc",
-    "test": "jest --config jest.config.cjs --coverage"
+    "lint": "tsc",
+    "test": "jest --config jest.config.cjs",
+    "coveralls": "jest --config jest.config.cjs --coverage && cat ./src/coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
@@ -35,6 +36,7 @@
     "@arethetypeswrong/cli": "^0.15.4",
     "@swc-node/jest": "^1.6.5",
     "@types/jest": "^27.0.1",
+    "coveralls": "^3.1.1",
     "tsup": "^8.2.4",
     "typescript": "^5.5.4"
   },

@@ -5,7 +5,6 @@ module.exports = {
     collectCoverage: true,
     clearMocks: true,
     rootDir: 'src',
-    coverageReporters: ['text'],
     testEnvironment: 'node',
     testMatch: ['**/*.(integration|test).ts'],
 };
