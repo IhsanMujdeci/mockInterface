@@ -1,6 +1,6 @@
 
 [![Build Status](https://app.travis-ci.com/IhsanMujdeci/mockInterface.svg?token=kJJoYJwssGpJ58mLxaz8&branch=main)](https://app.travis-ci.com/IhsanMujdeci/mockInterface)
-[![Coverage Status](https://coveralls.io/repos/github/IhsanMujdeci/mockInterface/badge.svg?branch=)](https://coveralls.io/github/IhsanMujdeci/mockInterface?branch=)
+[![Coverage Status](https://coveralls.io/repos/github/IhsanMujdeci/mockInterface/badge.svg?branch=main)](https://coveralls.io/github/IhsanMujdeci/mockInterface?branch=)
 
 
 # Mock Interface
