@@ -7,9 +7,20 @@
   "files": [
     "dist"
   ],
+  "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": "./dist/index.js",
+      "default": "./dist/index.cjs"
+    }
+  },
   "scripts": {
-    "build": "tsc",
-    "test": "jest --config jest.config.js"
+    "build": "tsup",
+    "ci": "npm run build && npm run check-exports && npm run lint && npm run test",
+    "check-exports": "attw --pack .",
+    "lint": "tsc",
+    "test": "jest --config jest.config.cjs"
   },
   "repository": {
     "type": "git",
@@ -18,13 +29,14 @@
   "author": "",
   "license": "ISC",
   "peerDependencies": {
-    "jest": ">=22.0.0",
-    "typescript": ">=4.4.3"
+    "jest": ">=22.0.0"
   },
   "devDependencies": {
+    "@arethetypeswrong/cli": "^0.15.4",
     "@swc-node/jest": "^1.6.5",
-    "@tsconfig/node12": "^1.0.11",
-    "@types/jest": "^27.0.1"
+    "@types/jest": "^27.0.1",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4"
   },
   "bugs": {
     "url": "https://github.com/IhsanMujdeci/mockInterface/issues"
