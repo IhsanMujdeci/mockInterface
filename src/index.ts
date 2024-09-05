@@ -55,7 +55,7 @@ export function shouldGetRealValue(prop: unknown, isMockFunctionAccess: boolean,
 // This is guarding against improperly defining the mock as a spy via the isSpy internal jest method
 // If no checked the mockInterface proxy will continue to incorrectly populate based on the last called property
 // if left unchecked this will fulfill the received.calls.all === 'function' && received.calls.count === 'function';
-// thus just will think it's a spy and will incorrectly get the count of how many times the mock.fn was called.
+// thus jest will think it's a spy and will incorrectly get the count of how many times the mock.fn was called.
 // Implementation of isSpy from jest.
 // const isSpy = received =>
 //   received != null &&

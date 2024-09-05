@@ -1,5 +1,5 @@
 # Mock Interface
-Zero dependency library that deeply mocks typescript interfaces via jest.fn() allowing you to adhere to easily SOLID principals.
+Zero dependency library that deeply mocks typescript interfaces via jest.fn() allowing you to adhere easily SOLID principals.
 
 ### Type safety
 Full type safety is preserved, type errors are thrown if a mock return/resolve type is incorrect or if method called incorrectly.
