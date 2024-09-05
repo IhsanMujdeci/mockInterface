@@ -1,6 +1,5 @@
 # Mock Interface
-
-Zero dependency library that deeply mocks typescript interfaces via jest.fn() allowing you to adhere to easily solid principals.  
+Zero dependency library that deeply mocks typescript interfaces via jest.fn() allowing you to adhere to easily SOLID principals.
 
 ### Type safety
 Full type safety is preserved, type errors are thrown if a mock return/resolve type is incorrect or if method called incorrectly.
@@ -40,6 +39,19 @@ describe('Mock Interface', () => {
     expect(person.speak.say).toHaveBeenNthCalledWith(1, 'Hey, listen!')
   })
 
+  // This is typically an edge case of similar interface mockers that aren't caught
+  it('Should mock toString function of interface', ()=>{
+    interface JsonWriter{
+      toString(): string
+    }
+    const mockJsonWriter = mockInterface<JsonWriter>()
+    mockJsonWriter.toString.mockReturnValue('{"nice": "json"}')
+    const w = mockJsonWriter.toString()
+    expect(w).toBe('{"nice": "json"}')
+    expect(mockJsonWriter.toString).toHaveBeenCalledTimes(1)
+    expect(mockJsonWriter.toString).toHaveBeenCalledWith()
+  })
+  
   it('Should test arbitrarily deep interface', ()=>{
     interface l1 {
       l2: l2;
@@ -60,19 +72,6 @@ describe('Mock Interface', () => {
     const d = levels.l2.l3.l4.dig();
     expect(d).toBe('end of the line');
     expect(levels.l2.l3.l4.dig).toHaveBeenCalledTimes(1);
-  })
-
-  // This is typically an edge case of similar interface mockers that aren't caught
-  it('Should mock toString function of interface', ()=>{
-    interface JsonWriter{
-      toString(): string
-    }
-    const mockJsonWriter = mockInterface<JsonWriter>()
-    mockJsonWriter.toString.mockReturnValue('{"nice": "json"}')
-    const w = mockJsonWriter.toString()
-    expect(w).toBe('{"nice": "json"}')
-    expect(mockJsonWriter.toString).toHaveBeenCalledTimes(1)
-    expect(mockJsonWriter.toString).toHaveBeenCalledWith()
   })
 })
 ```
