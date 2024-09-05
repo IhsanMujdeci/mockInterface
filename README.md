@@ -1,3 +1,8 @@
+
+[![Build Status](https://app.travis-ci.com/IhsanMujdeci/mockInterface.svg?token=kJJoYJwssGpJ58mLxaz8&branch=main)](https://app.travis-ci.com/IhsanMujdeci/mockInterface)
+[![Coverage Status](https://coveralls.io/repos/github/IhsanMujdeci/mockInterface/badge.svg?branch=)](https://coveralls.io/github/IhsanMujdeci/mockInterface?branch=)
+
+
 # Mock Interface
 Zero dependency library that deeply mocks typescript interfaces via jest.fn() allowing you to adhere easily SOLID principals.
 
